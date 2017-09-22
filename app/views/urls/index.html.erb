@@ -1,4 +1,5 @@
-<h2> Shorten your link </h2>
+<div class="pages" > 
+  <h2> Shorten your link </h2>
   <%= form_for @url, url: {controller: "urls", action: "create"} do |f| %>
 
   <%= f.label :url %>
@@ -6,9 +7,14 @@
   <%= f.submit 'CREATE URL',class: 'btn btn-xl' %>
   <% end %>
 
+  <br><hr>
   <h3> Frequently accessed URLs </h3>
 
   <%@url_new.each do |name,count|  %>
     <%= name %>
     <br>
   <%end %>
+</div>
+
+
+
