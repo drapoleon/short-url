@@ -5,3 +5,10 @@
   <%= f.text_field :main_url %> <br>
   <%= f.submit 'CREATE URL',class: 'btn btn-xl' %>
   <% end %>
+
+  <h3> Frequently accessed URLs </h3>
+
+  <%@url_new.each do |name,count|  %>
+    <%= name %>
+    <br>
+  <%end %>

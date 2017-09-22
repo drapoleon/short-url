@@ -2,6 +2,8 @@ class UrlsController < ApplicationController
  
  def index
   @url= Url.new
+  @url_new = Url.limit(100).group("main_url").order("count_main_url desc").count("main_url")
+
  end
 
  def show
