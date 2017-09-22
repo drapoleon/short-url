@@ -5,6 +5,7 @@ class UrlsController < ApplicationController
  end
 
  def show
+ 	
  end
 
  def create
