@@ -13,6 +13,7 @@ class UrlsController < ApplicationController
 
  def create
    @url= Url.new(url_params)
+   @url.sanitize
    @url.short_url = @url.get_short_url(@url.get_last_id)
    if @url.save
    	redirect_to urls_success_path

@@ -24,4 +24,11 @@ class Url < ApplicationRecord
     end
   end
 
+  def sanitize
+	  self.main_url.strip!
+	  unless self.main_url[/\Ahttp:\/\//] || self.main_url[/\Ahttps:\/\//]
+       self.main_url = "http://#{self.main_url}"
+      end
+  end
+
 end
